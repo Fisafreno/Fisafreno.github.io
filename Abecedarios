@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letra del Abecedario</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 10rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="letter">A</div>
+    <script>
+        const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let currentIndex = 0;
+        
+        const letterElement = document.getElementById('letter');
+        
+        document.body.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % letters.length;
+            letterElement.textContent = letters[currentIndex];
+        });
+    </script>
+</body>
+</html>
